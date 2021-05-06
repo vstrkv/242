@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit User</title>
+</head>
+<body>
+<div aling="center">
+  <h2>User</h2>
+  <form th:object="${user}">
+    <table>
+      <tr>
+        <td>ID: </td>
+        <td th:text="${user.id}"></td>
+        <input type="hidden" name="id"  th:field="*{id}" value="$*{user.id}">
+      </tr>
+      <tr>
+        <td>User Name: </td>
+        <td th:text="${user.name}"></td>
+        <td><input type="hidden" name="name" th:field="*{name}" value="$*{user.name}" /></td>
+      </tr>
+      <tr>
+        <td>Password: </td>
+        <td th:text="${user.password}"></td>
+        <td><input type="hidden" name="password" th:field="*{password}" value="$*{user.password}" /></td>
+      </tr>
+      <tr>
+        <td>Email: </td>
+        <td th:text="${user.email}"></td>
+        <td><input type="hidden" name="email" th:field="*{email}" value="$*{user.email}"/></td>
+      </tr>
+      <tr>
+        <td th:utext="${user.getRolesString()}">Roles</td>
+      </tr>
+    </table>
+    <a href="#" th:href="@{/logout}">Log Out</a>
+    <tr></tr>
+    <div sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+      <a href="/admin">Admin Page</a>
+    </div>
+  </form>
+</div>
+</body>
+</html>
