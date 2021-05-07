@@ -1,8 +1,4 @@
 package web.model;
-/**
- * This page description model of Users
- * @author Eugene Kashitsyn
- */
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
