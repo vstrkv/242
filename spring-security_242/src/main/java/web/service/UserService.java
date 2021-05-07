@@ -1,8 +1,5 @@
 package web.service;
-/**
- * This description my service methods
- * @author Eugene Kashitsyn
- */
+
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
