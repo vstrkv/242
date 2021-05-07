@@ -1,7 +1,4 @@
 package web.repository;
-/**
- * @author Eugene Kashitsyn
- */
 
 import org.springframework.stereotype.Repository;
 import web.model.User;
