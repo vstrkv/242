@@ -1,9 +1,4 @@
 package web.config;
-/**
- * This page description Security config
- *
- * @author Eugene Kashitsyn
- */
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
